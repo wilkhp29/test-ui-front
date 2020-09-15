@@ -5,4 +5,9 @@ module.exports = {
   purge: {
     content: ["./src/components/**/*.jsx", "./src/pages/**/*.jsx"],
   },
+  theme: {
+    zIndex: {
+      "-1000": "-1000",
+    },
+  },
 };
