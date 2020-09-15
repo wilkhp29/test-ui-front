@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { InputAdornment, Input } from "@material-ui/core";
 import Date from "../assets/svg/Icon/Date.svg";
 import Image from "../assets/svg/Icon/Image.svg";
 import Logo from "../assets/svg/Icon/Logo.svg";
@@ -115,13 +116,18 @@ const Home = () => {
                 >
                   Origem
                 </label>
-                <input
+                <Input
                   className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                   id="Origem"
                   type="text"
                   value={origem}
                   onChange={(event) => setOrigem(event.target.value)}
                   placeholder="Sua Origem"
+                  startAdornment={
+                    <InputAdornment position="start">
+                      <Image />
+                    </InputAdornment>
+                  }
                 />
               </div>
               <div className="w-full md:w-1/5 lg:w-1/5  xl:w-1/5 ">
@@ -131,13 +137,18 @@ const Home = () => {
                 >
                   Destino
                 </label>
-                <input
+                <Input
                   className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                   id="Destino"
                   type="text"
                   value={destino}
                   onChange={(event) => setDestino(event.target.value)}
                   placeholder="Seu Destino"
+                  startAdornment={
+                    <InputAdornment position="start">
+                      <Place />
+                    </InputAdornment>
+                  }
                 />
               </div>
               <div className="w-full md:w-1/5 lg:w-1/5  xl:w-1/5 ">
@@ -147,13 +158,18 @@ const Home = () => {
                 >
                   Data de Ida / Retorno
                 </label>
-                <input
-                  className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                <Input
+                  className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline no-calendar"
                   id="Data de Ida / Retorno"
                   type="date"
                   placeholder="data da viagem"
                   value={data}
                   onChange={(event) => setData(event.target.value)}
+                  startAdornment={
+                    <InputAdornment position="start">
+                      <Date />
+                    </InputAdornment>
+                  }
                 />
               </div>
               <div className="w-full md:w-1/5 lg:w-1/5  xl:w-1/5 ">
@@ -163,13 +179,18 @@ const Home = () => {
                 >
                   Número de pessoas
                 </label>
-                <input
+                <Input
                   className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                   id="Número de pessoas"
                   type="number"
                   placeholder="numero de pessoas"
                   value={pessoas}
                   onChange={(event) => setPessoas(event.target.value)}
+                  startAdornment={
+                    <InputAdornment position="start">
+                      <Person />
+                    </InputAdornment>
+                  }
                 />
               </div>
             </div>
